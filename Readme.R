@@ -15,12 +15,12 @@ ParametEqFun(Measured[,1])
 sqrt(sum((Measured[,2]-ParametEq)^2)/nrow(Measured))
 
 ## Figure
-pdf(width = 16/2.54, height = 9/2.54)
-par(las = 1)
+pdf(width = 16/2.54, height = 9/2.54, pointsize = 9)
+par(las = 1, mar = c(4.1,4.1,0.1,0.5),
+    xaxs = "i", yaxs = "i")
 plot(Measured, pch = 16, col = "red",
      xlim = c( 0, 30), ylim = c(0,9))
 points(Measured[,1], ParametEqFun(Measured[,1]), col = "red")
-
 curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 1, 29, add = TRUE)
 dev.off()
 

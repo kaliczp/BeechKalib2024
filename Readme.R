@@ -22,5 +22,6 @@ plot(Measured, pch = 16, col = "red",
      xlim = c( 0, 30), ylim = c(0,9))
 points(Measured[,1], ParametEqFun(Measured[,1]), col = "red")
 curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 1, 29, add = TRUE)
+legend("topleft",c("Data", "Model points", "Model curve"), pch = c(16,1,NA), lwd = c(NA, NA, 1),col = c("red","red", "black"))
 dev.off()
 

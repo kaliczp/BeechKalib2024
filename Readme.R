@@ -20,6 +20,6 @@ par(las = 1, mar = c(4.1,4.1,0.1,0.5),
     xaxs = "i", yaxs = "i")
 plot(Measured, pch = 16, col = "red",
      xlim = c( 0, 30), ylim = c(0,9))
-curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 1, 29, add = TRUE)
-legend("topleft",c("Data", "Model curve"), pch = c(16,NA), lwd = c(NA, 1),col = c("red", "black"))
+curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 0, 29, add = TRUE, lwd = 2)
+legend("topleft",c("Data", "Model"), pch = c(16,NA), lwd = c(NA, 2),col = c("red", "black"))
 dev.off()

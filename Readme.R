@@ -18,8 +18,8 @@ sqrt(sum((Measured[,2]-ParametEq)^2)/nrow(Measured))
 pdf(width = 16/2.54, height = 9/2.54, pointsize = 9)
 par(las = 1, mar = c(4.1,4.1,0.1,0.5),
     xaxs = "i", yaxs = "i")
-plot(Measured, pch = 16, col = "red",
+plot(Measured, pch = 16, col = "#4f81bd",
      xlim = c( 0, 30), ylim = c(0,9))
 curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 0, 29, add = TRUE, lwd = 2)
-legend("topleft",c("Data", "Model"), pch = c(16,NA), lwd = c(NA, 2),col = c("red", "black"))
+legend("topleft",c("Data", "Model"), pch = c(16,NA), lwd = c(NA, 2),col = c("#4f81bd", "black"))
 dev.off()

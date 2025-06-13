@@ -27,3 +27,8 @@ curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 0, 29, add = TRUE, lwd = 2)
 curve(1.9323*(1-2.718^(-x/1.9323))+0.1*x, 0, 29, add = TRUE, lwd = 2, col = "lightgray")
 legend("topleft",c("Measured data", "Modified Merriam model RMSE", "Modified Merriam model MAE"), pch = c(16,NA,NA), lwd = c(NA, 2, 2),col = c("#4f81bd", "black", "lightgray"))
 dev.off()
+
+## Lack-of-fit
+Model1 <- 1.911*(1-2.718^(-Measured$Prec/1.911))+0.1*Measured$Prec
+plot(Model1, Measured$Interc - Model1, ylab = "Residuals", xlab = "Fitted")
+axis(2, at = 0, tck = 1, lty = "dotted")

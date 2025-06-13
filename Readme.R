@@ -21,5 +21,5 @@ par(las = 1, mar = c(4.1,4.1,0.1,0.5),
 plot(Measured, pch = 16, col = "#4f81bd",
      xlim = c( 0, 30), ylim = c(0,9))
 curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 0, 29, add = TRUE, lwd = 2)
-legend("topleft",c("Data", "Model"), pch = c(16,NA), lwd = c(NA, 2),col = c("#4f81bd", "black"))
+legend("topleft",c("Measured data", "Modified Merriam model"), pch = c(16,NA), lwd = c(NA, 2),col = c("#4f81bd", "black"))
 dev.off()

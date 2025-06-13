@@ -11,4 +11,4 @@ optInt <- function(Para, Prec, Int, Opt = "RMSE") {
 optimize(optInt, interval = c(1.5,2.5), Prec = Measured$Prec, Int = Measured$Int)
 
 ## MAE
-optimize(optInt, interval = c(1.5,2.5), Prec = Measured$Prec, Int = Measured$Int, Opt = "MAE")
+optimize(optInt, interval = c(1,3), Prec = Measured$Prec, Int = Measured$Int, Opt = "MAE")

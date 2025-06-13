@@ -24,6 +24,6 @@ plot(Measured, pch = 16, col = "#4f81bd",
      ylab = "Interception [mm]",
      xlim = c( 0, 30), ylim = c(0,9))
 curve(1.911*(1-2.718^(-x/1.911))+0.1*x, 0, 29, add = TRUE, lwd = 2)
-curve(1.932284*(1-2.718^(-x/1.932284))+0.1*x, 0, 29, add = TRUE, lwd = 2, col = "lightgray")
+curve(1.9323*(1-2.718^(-x/1.9323))+0.1*x, 0, 29, add = TRUE, lwd = 2, col = "lightgray")
 legend("topleft",c("Measured data", "Modified Merriam model RMSE", "Modified Merriam model MAE"), pch = c(16,NA,NA), lwd = c(NA, 2, 2),col = c("#4f81bd", "black", "lightgray"))
 dev.off()
